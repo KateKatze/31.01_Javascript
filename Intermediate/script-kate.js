@@ -25,19 +25,19 @@ console.log(averSum);
 
 switch (true){
   case (averSum >= 90):
-  document.getElementById('string').innerHTML = "It´s an A! <br>"; 
+  document.getElementByClassName('string').innerHTML = "It´s an A! <br>"; 
   break;
   case (averSum<=89&&averSum>=80):
-  document.getElementById('string').innerHTML = "It´s a B! <br>";
+  document.getElementsByClassName('string').innerHTML = "It´s a B! <br>";
   break;
   case (averSum<=79&&averSum>=70):
-  document.getElementById('string').innerHTML = "It´s a C! <br>";
+  document.getElementsByClassName('string').innerHTML = "It´s a C! <br>";
   break;
   case (averSum<=69&&averSum>=60):
-  document.getElementById('string').innerHTML = "It´s a D! <br>";
+  document.getElementsByClassName('string').innerHTML = "It´s a D! <br>";
   break;
   case (averSum<60):
-  document.getElementById('string').innerHTML = "It´s an F! <br>";
+  document.getElementByClassName('string').innerHTML = "It´s an F! <br>";
   break;
   }
 
