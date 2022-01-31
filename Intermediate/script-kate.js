@@ -21,42 +21,46 @@ for (var i in arr) {
 }
 
 var averSum = start / arr.length;
-console.log(averSum);
 
 switch (true){
   case (averSum >= 90):
-  document.getElementByClassName('string').innerHTML = "It´s an A! <br>"; 
+  document.getElementByClassName("string")[0].innerHTML = "It´s an A! <br>"; 
+  document.getElementsByClassName("string")[0].style.background = "green";
   break;
   case (averSum<=89&&averSum>=80):
-  document.getElementsByClassName('string').innerHTML = "It´s a B! <br>";
+  document.getElementsByClassName("string")[0].innerHTML = "It´s a B! <br>";
+  document.getElementsByClassName("string")[0].style.background = "green";
   break;
   case (averSum<=79&&averSum>=70):
-  document.getElementsByClassName('string').innerHTML = "It´s a C! <br>";
+  document.getElementsByClassName("string")[0].innerHTML = "It´s a C! <br>";
+  document.getElementsByClassName("string")[0].style.background = "yellow";
   break;
   case (averSum<=69&&averSum>=60):
-  document.getElementsByClassName('string').innerHTML = "It´s a D! <br>";
+  document.getElementsByClassName("string")[0].innerHTML = "It´s a D! <br>";
+  document.getElementsByClassName("string")[0].style.background = "red";
   break;
   case (averSum<60):
-  document.getElementByClassName('string').innerHTML = "It´s an F! <br>";
+  document.getElementByClassName("string")[0].innerHTML = "It´s an F! <br>";
+  document.getElementsByClassName("string")[0].style.background = "red";
   break;
   }
 
 for (let i=0; i < arr.length; i++){
   switch (true) {
     case (arr[i] >= 90):
-    document.write("It´s an A! <br>"); 
+      document.getElementById("notes").innerHTML += "It´s an A! <br>";
     break;
     case (arr [i]<=89&&arr [i]>=80):
-    document.write("It´s a B! <br>");
+      document.getElementById("notes").innerHTML += "It´s an B! <br>";
     break;
     case (arr [i]<=79&&arr [i]>=70):
-    document.write("It´s a C! <br>");
+      document.getElementById("notes").innerHTML += "It´s an C! <br>";
     break;
     case (arr [i]<=69&&arr [i]>=60):
-    document.write("It´s a D! <br>");
+      document.getElementById("notes").innerHTML += "It´s an D! <br>";
     break;
     case (arr [i]<60):
-    document.write("It´s an F :( <br>");
+      document.getElementById("notes").innerHTML += "It´s an F! <br>";
     break;
   }
 }
@@ -80,4 +84,43 @@ for (let i=0; i < arr.length; i++){
 // if(arr [i]<60) {
 // document.write("It´s an F :( <br>");
 // }
+// }
+
+
+// Third example:
+
+// var arr = [76, 85, 65, 93, 81];
+// var start = 0;
+// function displayGrades(grade, isAverage = false) {
+//   if (isAverage) {
+//     var text = "The average is ";
+//   } else {
+//     var text = "It´s an ";
+//   }
+//   console.log("grade", grade);
+//   switch (true) {
+//     case grade >= 90:
+//       document.write(`${text} A! <br>`);
+//       break;
+//     case grade <= 89 && grade >= 80:
+//       document.write(`${text} B! <br>`);
+//       break;
+//     case grade <= 79 && grade >= 70:
+//       document.write(`${text} C! <br>`);
+//       break;
+//     case grade <= 69 && grade >= 60:
+//       document.write(`${text} D! <br>`);
+//       break;
+//     case grade < 60:
+//       document.write(`${text} F! <br>`);
+//       break;
+//   }
+// }
+// for (var i in arr) {
+//   start += arr[i];
+// }
+// var averSum = start / arr.length;
+// displayGrades(averSum, true);
+// for (let i = 0; i < arr.length; i++) {
+//   displayGrades(arr[i], false);
 // }
