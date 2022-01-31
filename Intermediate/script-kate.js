@@ -21,7 +21,15 @@
 // var Dav = 81;
 
 
-let arr = [76, 85, 65, 93, 81];
+var arr = [76, 85, 65, 93, 81];
+
+var start = 0;
+for (var i in arr) {
+  start += arr[i];
+}
+
+console.log(start / 5);
+
 
 for (let i=0; i < arr.length; i++){
 if(arr [i] >= 90) {
@@ -40,6 +48,8 @@ if(arr [i]<60) {
 document.write("It´s an F :( <br>");
 }
 }
+
+
 
 
 
