@@ -6,6 +6,20 @@
 arr = (1, 7, -3, 9);
 console.log(Math.max(arr));
 
+
+function getArrayMax(array){
+    return Math.max.apply(null, array);
+ }
+ function getArrayMin(array){
+    return Math.min.apply(null, array);
+ }
+ var ages=[1, 7, -3, 9];
+ var maxAge=getArrayMax(ages); 
+ var minAge=getArrayMin(ages); 
+
+ console.log(maxAge);
+ console.log(minAge);
+ 
 // function biggestNumberInArray(arr) {
 //     const max = Math.max(1, 7, -3, 9);
 //     return max;
