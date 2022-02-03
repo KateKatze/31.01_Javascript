@@ -17,12 +17,11 @@
 // }
 
 
-
-var temp =Math.floor(Math.random()*35);
+var temp = Math.floor(Math.random() * 35);
 console.log(temp)
-if (temp < 10){
-    document.write("The weather is cold");}
-if (temp <= 32 && temp > 10){
-    document.write("The weather is moderate");}
-
-else{document.write("The weather is hot")}
+if (temp < 10) {
+    document.write("The weather is cold");
+}
+if (temp <= 32 && temp > 10) {
+    document.write("The weather is moderate");
+} else { document.write("The weather is hot") }
